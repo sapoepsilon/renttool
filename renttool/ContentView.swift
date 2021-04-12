@@ -39,7 +39,8 @@ struct ContentView: View {
                     .onTapGesture(perform: {
                         self.login()
                     })
-                }
+                }.background(Color.blue)
+                .foregroundColor(Color.white)
 
                 
                 NavigationLink(
