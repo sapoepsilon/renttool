@@ -40,7 +40,7 @@ struct ContentView: View {
                         self.login()
                     })
                 }.background(Color.orange)
-                .foregroundColor(Color.white)
+                .foregroundColor(Color.green)
 
                 
                 NavigationLink(
