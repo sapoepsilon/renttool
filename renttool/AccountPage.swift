@@ -58,12 +58,23 @@ struct AccountPage: View {
             
             
             VStack {
+                
                 ForEach((self.data), id: \.self.toolID) { item in
+                    HStack{
                     Text("\(item.toolName)")
-                      }
+                        Spacer()
+                        Text("$\(+item.toolPrice)")
+                        Spacer()
+                        
+                        RemoteImage(url: item.photoURL)
+                            .frame(width:75, height:50)
+                            
+                    }}
                   }.onAppear {
                     self.getTools()
                   }.foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
+            
+            
             
         }.onAppear { self.fetchData() }
         .navigationTitle("Account page")
@@ -121,8 +132,8 @@ struct AccountPage: View {
                         let id = document.documentID
                         let name = document.get("toolName") as! String
                         let price = document.get("toolPrice") as! String
-                        
-                        self.data.append(toolObject(id: id, name: name, price: Int(price)!))
+                        let url = document.get("PhotoURL") as! String
+                        self.data.append(toolObject(id: id, name: name, price: Int(price)!, url: url))
                         
 
                     } else {

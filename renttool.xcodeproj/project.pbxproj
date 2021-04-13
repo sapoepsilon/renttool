@@ -19,6 +19,7 @@
 		99AB9EDF262539C100A5621B /* AddTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99AB9EDE262539C100A5621B /* AddTool.swift */; };
 		99C176E126264F85002758A0 /* toolFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C176E026264F85002758A0 /* toolFetcher.swift */; };
 		99C3D5AA26254F64000AFC5A /* imagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C3D5A926254F64000AFC5A /* imagePicker.swift */; };
+		99E9AF7E26265A21009E80EF /* remoteImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E9AF7D26265A21009E80EF /* remoteImage.swift */; };
 		B23065DFAE43A8FCD4CE7EC5 /* Pods_renttool.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A5ABD1A49956C5739BEDFA2 /* Pods_renttool.framework */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +41,7 @@
 		99AB9EDE262539C100A5621B /* AddTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTool.swift; sourceTree = "<group>"; };
 		99C176E026264F85002758A0 /* toolFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = toolFetcher.swift; sourceTree = "<group>"; };
 		99C3D5A926254F64000AFC5A /* imagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imagePicker.swift; sourceTree = "<group>"; };
+		99E9AF7D26265A21009E80EF /* remoteImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = remoteImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +123,7 @@
 			children = (
 				99C3D5A926254F64000AFC5A /* imagePicker.swift */,
 				99C176E026264F85002758A0 /* toolFetcher.swift */,
+				99E9AF7D26265A21009E80EF /* remoteImage.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -247,6 +250,7 @@
 				99AB9EDF262539C100A5621B /* AddTool.swift in Sources */,
 				997B6D9426225544000804E6 /* renttoolApp.swift in Sources */,
 				99C3D5AA26254F64000AFC5A /* imagePicker.swift in Sources */,
+				99E9AF7E26265A21009E80EF /* remoteImage.swift in Sources */,
 				9976BF672624D12B00227851 /* AccountPage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
