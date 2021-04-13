@@ -13,6 +13,7 @@
 		992AC6C32622D11400507E7C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992AC6C22622D11400507E7C /* ContentView.swift */; };
 		992AC6CA2623357900507E7C /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992AC6C92623357900507E7C /* SignUp.swift */; };
 		992AC6CD26241CF700507E7C /* RegisterUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 992AC6CC26241CF700507E7C /* RegisterUser.swift */; };
+		9976BF672624D12B00227851 /* AccountPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9976BF662624D12B00227851 /* AccountPage.swift */; };
 		997B6D9426225544000804E6 /* renttoolApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997B6D9326225544000804E6 /* renttoolApp.swift */; };
 		997B6D9B26225544000804E6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 997B6D9A26225544000804E6 /* Preview Assets.xcassets */; };
 		B23065DFAE43A8FCD4CE7EC5 /* Pods_renttool.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A5ABD1A49956C5739BEDFA2 /* Pods_renttool.framework */; };
@@ -28,6 +29,7 @@
 		992AC6C92623357900507E7C /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
 		992AC6CC26241CF700507E7C /* RegisterUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUser.swift; sourceTree = "<group>"; };
 		99409B878131E81521017FE7 /* Pods-renttool.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-renttool.debug.xcconfig"; path = "Target Support Files/Pods-renttool/Pods-renttool.debug.xcconfig"; sourceTree = "<group>"; };
+		9976BF662624D12B00227851 /* AccountPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountPage.swift; sourceTree = "<group>"; };
 		997B6D9026225544000804E6 /* renttool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = renttool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		997B6D9326225544000804E6 /* renttoolApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = renttoolApp.swift; sourceTree = "<group>"; };
 		997B6D9A26225544000804E6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 				997B6D9926225544000804E6 /* Preview Content */,
 				992AC6C92623357900507E7C /* SignUp.swift */,
 				992AC6CC26241CF700507E7C /* RegisterUser.swift */,
+				9976BF662624D12B00227851 /* AccountPage.swift */,
 			);
 			path = renttool;
 			sourceTree = "<group>";
@@ -224,6 +227,7 @@
 				992AC6CD26241CF700507E7C /* RegisterUser.swift in Sources */,
 				992AC6CA2623357900507E7C /* SignUp.swift in Sources */,
 				997B6D9426225544000804E6 /* renttoolApp.swift in Sources */,
+				9976BF672624D12B00227851 /* AccountPage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

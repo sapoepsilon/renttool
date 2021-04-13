@@ -28,12 +28,13 @@ struct ContentView: View {
             NavigationView {
                VStack {
                     
-                    TextField("Email", text: $email)
+                TextField("Email", text: $email)
+                    .background(Color.gray)
                     
                 SecureField("Password", text: $password)
                     
                 NavigationLink(
-                destination: SignUp(),
+                destination: AccountPage(),
                 isActive: $shouldTransit) {
                 Text("Signin")
                     .onTapGesture(perform: {
