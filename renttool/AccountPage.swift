@@ -9,6 +9,15 @@ import SwiftUI
 import FirebaseAuth
 import FirebaseFirestore
 
+
+struct tools:Identifiable {
+    var id = UUID()
+    var toolID = String.self
+    var image = String.self
+    var toolName = String.self
+    var toolPrice = Int.self
+}
+
 struct AccountPage: View {
     
     let db = Firestore.firestore()
@@ -30,7 +39,7 @@ struct AccountPage: View {
                 TextField("PhoneNumber", value: $phoneNumber,formatter: NumberFormatter())
                     .background(Color.gray)
                     .multilineTextAlignment(.center)
-                
+        
                 Button(action: {
                                 updateAccount()
                 }){ Text("updateAccount").padding() }

@@ -131,15 +131,12 @@ struct AddTool: View {
                 }
             }
                 
-             
-                let tools = [toolID]
-                
                 let userRef = db.collection("users").document(userID!)
-                userRef.setData(["toolID" : tools], merge: true) { err in
+                userRef.updateData(["toolID" : FieldValue.arrayUnion([toolID]) ]) { err in
                     if let err = err {
                         print("Error updating document: \(err)")
                     } else {
-                        print("Document successfully updated")
+                        print("Tool successfully updated")
                         
                         
                    
