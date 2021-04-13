@@ -17,8 +17,9 @@ struct AccountPage: View {
     @State var phoneNumber = 0
     
     var body: some View {
-        VStack(alignment: .leading) {
+        VStack() {
             VStack{
+                
                 TextField("lastName", text: $lastName)
                     .background(Color.gray)
                     .multilineTextAlignment(.center)
@@ -30,7 +31,15 @@ struct AccountPage: View {
                     .background(Color.gray)
                     .multilineTextAlignment(.center)
                 
-            }.frame(minWidth: 200, maxHeight: 600, alignment:
+                Button(action: {
+                                updateAccount()
+                }){ Text("updateAccount").padding() }
+                .background(Color.green)
+                .foregroundColor(.white)
+
+                        
+                
+            }.frame(minWidth: 200, maxHeight: 800, alignment:
                         .topLeading)
             
            
@@ -53,13 +62,30 @@ struct AccountPage: View {
             }
         }
     }
-    
-}
 
+    func updateAccount() {
+        guard let userID = Auth.auth().currentUser?.uid else { return }
+        let updateRef = db.collection("users").document(userID)
+
+        // Set the "capital" field of the city 'DC'
+        updateRef.updateData([
+            "name": name,
+            "lastName" : lastName,
+            "phoneNumber" : phoneNumber
+        ]) { err in
+            if let err = err {
+                print("Error updating document: \(err)")
+            } else {
+                print("Document successfully updated")
+            }
+        }
+    }
+
+}
 struct AccountPage_Previews: PreviewProvider {
     static var previews: some View {
         AccountPage()
     }
-}
+ }
 
 
