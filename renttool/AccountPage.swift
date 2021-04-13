@@ -36,6 +36,15 @@ struct AccountPage: View {
                 }){ Text("updateAccount").padding() }
                 .background(Color.green)
                 .foregroundColor(.white)
+                
+                NavigationLink(
+                destination: AddTool()) {
+                Text("Add a new tool")
+                    .foregroundColor(Color.blue)
+                  
+                    
+                }
+
 
                         
                 
