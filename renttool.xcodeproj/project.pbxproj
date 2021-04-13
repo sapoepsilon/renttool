@@ -17,6 +17,7 @@
 		997B6D9426225544000804E6 /* renttoolApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997B6D9326225544000804E6 /* renttoolApp.swift */; };
 		997B6D9B26225544000804E6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 997B6D9A26225544000804E6 /* Preview Assets.xcassets */; };
 		99AB9EDF262539C100A5621B /* AddTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99AB9EDE262539C100A5621B /* AddTool.swift */; };
+		99C176E126264F85002758A0 /* toolFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C176E026264F85002758A0 /* toolFetcher.swift */; };
 		99C3D5AA26254F64000AFC5A /* imagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C3D5A926254F64000AFC5A /* imagePicker.swift */; };
 		B23065DFAE43A8FCD4CE7EC5 /* Pods_renttool.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A5ABD1A49956C5739BEDFA2 /* Pods_renttool.framework */; };
 /* End PBXBuildFile section */
@@ -37,6 +38,7 @@
 		997B6D9A26225544000804E6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		997B6D9C26225544000804E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		99AB9EDE262539C100A5621B /* AddTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTool.swift; sourceTree = "<group>"; };
+		99C176E026264F85002758A0 /* toolFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = toolFetcher.swift; sourceTree = "<group>"; };
 		99C3D5A926254F64000AFC5A /* imagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imagePicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -118,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				99C3D5A926254F64000AFC5A /* imagePicker.swift */,
+				99C176E026264F85002758A0 /* toolFetcher.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -240,6 +243,7 @@
 				992AC6C32622D11400507E7C /* ContentView.swift in Sources */,
 				992AC6CD26241CF700507E7C /* RegisterUser.swift in Sources */,
 				992AC6CA2623357900507E7C /* SignUp.swift in Sources */,
+				99C176E126264F85002758A0 /* toolFetcher.swift in Sources */,
 				99AB9EDF262539C100A5621B /* AddTool.swift in Sources */,
 				997B6D9426225544000804E6 /* renttoolApp.swift in Sources */,
 				99C3D5AA26254F64000AFC5A /* imagePicker.swift in Sources */,

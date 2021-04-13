@@ -10,20 +10,16 @@ import FirebaseAuth
 import FirebaseFirestore
 
 
-struct tools:Identifiable {
-    var id = UUID()
-    var toolID = String.self
-    var image = String.self
-    var toolName = String.self
-    var toolPrice = Int.self
-}
-
 struct AccountPage: View {
     
     let db = Firestore.firestore()
     @State var name = ""
     @State var lastName = ""
     @State var phoneNumber = 0
+    @State var toolsUser = []
+    @State var data: [toolObject] = []
+
+    
     
     var body: some View {
         VStack() {
@@ -32,35 +28,43 @@ struct AccountPage: View {
                 TextField("lastName", text: $lastName)
                     .background(Color.gray)
                     .multilineTextAlignment(.center)
-              
+                
                 TextField("Name", text: $name)
                     .background(Color.gray)
                     .multilineTextAlignment(.center)
                 TextField("PhoneNumber", value: $phoneNumber,formatter: NumberFormatter())
                     .background(Color.gray)
                     .multilineTextAlignment(.center)
-        
+                
                 Button(action: {
-                                updateAccount()
+                    updateAccount()
                 }){ Text("updateAccount").padding() }
                 .background(Color.green)
                 .foregroundColor(.white)
                 
                 NavigationLink(
-                destination: AddTool()) {
-                Text("Add a new tool")
-                    .foregroundColor(Color.blue)
-                  
+                    destination: AddTool()) {
+                    Text("Add a new tool")
+                        .foregroundColor(Color.blue)
+                    
                     
                 }
-
-
-                        
+                
+                
+                
                 
             }.frame(minWidth: 200, maxHeight: 800, alignment:
                         .topLeading)
             
-           
+            
+            VStack {
+                ForEach((self.data), id: \.self.toolID) { item in
+                    Text("\(item.toolName)")
+                      }
+                  }.onAppear {
+                    self.getTools()
+                  }.foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
+            
         }.onAppear { self.fetchData() }
         .navigationTitle("Account page")
         .foregroundColor(Color.white)
@@ -80,11 +84,11 @@ struct AccountPage: View {
             }
         }
     }
-
+    
     func updateAccount() {
         guard let userID = Auth.auth().currentUser?.uid else { return }
         let updateRef = db.collection("users").document(userID)
-
+        
         // Set the "capital" field of the city 'DC'
         updateRef.updateData([
             "name": name,
@@ -98,12 +102,43 @@ struct AccountPage: View {
             }
         }
     }
+    
+    func getTools() {
+        
+        guard let userID = Auth.auth().currentUser?.uid else { return }
+        db.collection("users").document(userID).getDocument { (document, error) in
+            if let document = document, document.exists {
+                toolsUser = document.get("toolID") as! Array
+                print(toolsUser)
+            } else {
+                print("document does not exist")
+            }
+            
+            
+            for tool in toolsUser {
+                db.collection("tools").document(tool as! String).getDocument{ (document, error) in
+                    if let document = document, document.exists {
+                        let id = document.documentID
+                        let name = document.get("toolName") as! String
+                        let price = document.get("toolPrice") as! String
+                        
+                        self.data.append(toolObject(id: id, name: name, price: Int(price)!))
+                        
 
-}
-struct AccountPage_Previews: PreviewProvider {
-    static var previews: some View {
-        AccountPage()
+                    } else {
+                        print("document does not exist")
+                    }
+                }
+                
+            }
+            
+        }
     }
- }
-
-
+        struct AccountPage_Previews: PreviewProvider {
+            static var previews: some View {
+                AccountPage()
+            }
+        }
+        
+        
+    }
