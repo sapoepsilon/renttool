@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E8D68B9262DE9D300BEC1CF /* browserTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8D68B8262DE9D300BEC1CF /* browserTools.swift */; };
+		0E8D68C0262F1A9200BEC1CF /* Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8D68BF262F1A9200BEC1CF /* Tools.swift */; };
+		0E8D68C3262F20AF00BEC1CF /* ToolViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8D68C2262F20AF00BEC1CF /* ToolViewModel.swift */; };
 		992AC6B42622581D00507E7C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 992AC6B32622581D00507E7C /* GoogleService-Info.plist */; };
 		992AC6BC2622D0C700507E7C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 992AC6BB2622D0C700507E7C /* Assets.xcassets */; };
 		992AC6C02622D0D400507E7C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 992AC6BF2622D0D400507E7C /* Assets.xcassets */; };
@@ -24,6 +27,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0E8D68B8262DE9D300BEC1CF /* browserTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = browserTools.swift; sourceTree = "<group>"; };
+		0E8D68BF262F1A9200BEC1CF /* Tools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tools.swift; sourceTree = "<group>"; };
+		0E8D68C2262F20AF00BEC1CF /* ToolViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolViewModel.swift; sourceTree = "<group>"; };
 		2B38088FA568EA09B9894582 /* Pods-renttool.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-renttool.release.xcconfig"; path = "Target Support Files/Pods-renttool/Pods-renttool.release.xcconfig"; sourceTree = "<group>"; };
 		6A5ABD1A49956C5739BEDFA2 /* Pods_renttool.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_renttool.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		992AC6B32622581D00507E7C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -99,6 +105,7 @@
 				992AC6BF2622D0D400507E7C /* Assets.xcassets */,
 				997B6D9326225544000804E6 /* renttoolApp.swift */,
 				992AC6C22622D11400507E7C /* ContentView.swift */,
+				0E8D68B8262DE9D300BEC1CF /* browserTools.swift */,
 				997B6D9C26225544000804E6 /* Info.plist */,
 				992AC6B32622581D00507E7C /* GoogleService-Info.plist */,
 				997B6D9926225544000804E6 /* Preview Content */,
@@ -124,6 +131,8 @@
 				99C3D5A926254F64000AFC5A /* imagePicker.swift */,
 				99C176E026264F85002758A0 /* toolFetcher.swift */,
 				99E9AF7D26265A21009E80EF /* remoteImage.swift */,
+				0E8D68BF262F1A9200BEC1CF /* Tools.swift */,
+				0E8D68C2262F20AF00BEC1CF /* ToolViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -245,10 +254,13 @@
 			files = (
 				992AC6C32622D11400507E7C /* ContentView.swift in Sources */,
 				992AC6CD26241CF700507E7C /* RegisterUser.swift in Sources */,
+				0E8D68B9262DE9D300BEC1CF /* browserTools.swift in Sources */,
 				992AC6CA2623357900507E7C /* SignUp.swift in Sources */,
 				99C176E126264F85002758A0 /* toolFetcher.swift in Sources */,
+				0E8D68C3262F20AF00BEC1CF /* ToolViewModel.swift in Sources */,
 				99AB9EDF262539C100A5621B /* AddTool.swift in Sources */,
 				997B6D9426225544000804E6 /* renttoolApp.swift in Sources */,
+				0E8D68C0262F1A9200BEC1CF /* Tools.swift in Sources */,
 				99C3D5AA26254F64000AFC5A /* imagePicker.swift in Sources */,
 				99E9AF7E26265A21009E80EF /* remoteImage.swift in Sources */,
 				9976BF672624D12B00227851 /* AccountPage.swift in Sources */,
